@@ -39,7 +39,8 @@ class KBMatch:
     
     def hitkg(self, query,typeq):
         try:
-            url = 'http://134.100.15.203:8892/sparql/'
+            # url = 'http://134.100.15.203:8892/sparql/'
+            url = 'https://dbpedia.org/sparql'
             #print(query)
             r = requests.get(url, params={'format': 'json', 'query': query})
             json_format = r.json()

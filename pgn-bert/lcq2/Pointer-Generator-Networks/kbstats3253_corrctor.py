@@ -84,7 +84,8 @@ class KBMatch:
     
     def hitkg(self, query,typeq):
         try:
-            url = 'http://ltcpu3:8890/sparql/'
+            # url = 'http://ltcpu3:8890/sparql/'
+            url = 'https://query.wikidata.org'
             query = query.replace('wd:q','wd:Q').replace('wdt:p','wdt:P').replace('p:p','p:P').replace('ps:p','ps:P').replace('pq:p','pq:P').replace(" ' ","'")
             print(query)
             query = '''PREFIX p: <http://www.wikidata.org/prop/> PREFIX pq: <http://www.wikidata.org/prop/qualifier/> PREFIX ps: <http://www.wikidata.org/prop/statement/>   PREFIX wd: <http://www.wikidata.org/entity/> PREFIX wds: <http://www.wikidata.org/entity/statement/> PREFIX wdt: <http://www.wikidata.org/prop/direct/> ''' + query
